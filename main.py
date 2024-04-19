@@ -30,5 +30,9 @@ facts_list = ["Elon Musk mengklaim bahwa jejaring sosial dirancang untuk membuat
 def facts():
     return f'<p>{random.choice(facts_list)}</p><a href="/">View a random fact!</a>'
 
+@app.route("/secret")
+def secret():
+    result=random.choice(["Atas","Bawah"])
+    return f"Hasil lempar koin:{result}"
 
 app.run(debug=True)
